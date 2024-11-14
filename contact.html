@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="foot.css">
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <img class="logo-icon" src="image/logo.jpeg" alt="Foundation Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#impact">Impact</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="donate-btn">Donate Now</a>
+            </div>
+        </div>
+    </nav>
+  <div class="contact-container">
+    <h1>Get in Touch</h1>
+    <p class="p1">We're here to answer any questions you might have.</p>
+    <form id="contact-form" action="https://formspree.io/f/mdknqvqn" method="POST">
+      <div class="name-email-container">
+        <input type="text" name="name" placeholder="WHAT'S YOUR NAME" required>
+        <input type="email" name="email" placeholder="YOUR EMAIL" required>
+      </div>
+      <input type="tel" name="phone" placeholder="YOUR CONTACT NUMBER" pattern="[0-9]+" inputmode="numeric" title="Please enter a valid phone number" required>
+      <textarea name="message" placeholder="WHAT WOULD YOU LIKE TO TALK ABOUT?" required></textarea>
+      <p class="disclaimer">* We promise not to disclose your personal information to third parties.</p>
+      <div class="button-container">
+        <button type="submit">SEND MESSAGE</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="confirmation-popup" id="confirmation-popup">
+    <p>Your message has been sent successfully!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+<section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@foundation.org</p>
+                <p>Phone: +919663423259</p>
+                <p>Address: Bangalore</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#programs">Our Programs</a>
+                <a href="#impact">Impact</a>
+                <a href="#donate">Donate</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+</section>
+  <script>
+    // Handle form submission
+    const form = document.getElementById('contact-form');
+    const popup = document.getElementById('confirmation-popup');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      // Gather form data
+      const formData = new FormData(form);
+
+      try {
+        // Send form data to Formspree
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset(); // Clear the form fields
+          popup.style.display = 'block'; // Show confirmation popup
+        } else {
+          alert('Oops! There was a problem submitting your form.');
+        }
+      } catch (error) {
+        alert('Oops! There was an error.');
+      }
+    });
+
+    // Close the confirmation popup
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+  </script>
+  
+</body>
+</html>

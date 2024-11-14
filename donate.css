@@ -1,0 +1,354 @@
+/* Donation Page Specific Styles */
+
+/* Donation Hero Section */
+.donation-hero {
+    position: relative;
+    min-height: 500px;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9)),
+                url('/api/placeholder/1920/600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.donation-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.donation-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.impact-statement {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Impact Boxes */
+.impact-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.impact-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.impact-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.impact-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+/* Donation Form Section */
+.donation-form-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.donation-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donation-container h2 {
+    color: #2c5282;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Amount Selection */
+.amount-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.amount-btn {
+    padding: 1rem 2rem;
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+    background: white;
+    color: #4CAF50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.amount-btn:hover,
+.amount-btn.selected {
+    background: #4CAF50;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.custom-amount {
+    flex: 1;
+    min-width: 200px;
+}
+
+.custom-amount input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.custom-amount input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Donation Frequency */
+.donation-frequency {
+    margin: 2.5rem 0;
+}
+
+.donation-frequency h3 {
+    color: #2c5282;
+    margin-bottom: 1rem;
+}
+
+.frequency-options {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.frequency-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.frequency-options label:hover {
+    background-color: #f0f9f0;
+}
+
+/* Form Elements */
+.donor-form {
+    margin-top: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Payment Methods */
+.payment-options {
+    margin: 2.5rem 0;
+}
+
+.payment-options h3 {
+    color: #2c5282;
+    margin-bottom: 1rem;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.payment-method-btn {
+    flex: 1;
+    padding: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.payment-method-btn:hover,
+.payment-method-btn.selected {
+    border-color: #4CAF50;
+    background: #f0f9f0;
+    transform: translateY(-2px);
+}
+
+/* Submit Button */
+.donate-submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.donate-submit-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Tax Benefits Notice */
+.tax-benefits {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+/* Trust Indicators */
+.trust-indicators {
+    padding: 3rem 2rem;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.trust-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.trust-item img {
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.trust-item:hover img {
+    transform: scale(1.1);
+}
+
+.trust-item p {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Success Message */
+.donation-success {
+    text-align: center;
+    padding: 2rem;
+    background: #f0f9f0;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+.donation-success h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .impact-boxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+    }
+    
+    .trust-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .donation-container {
+        padding: 1.5rem;
+    }
+    
+    .frequency-options {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Animation for Success */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.5s ease forwards;
+}

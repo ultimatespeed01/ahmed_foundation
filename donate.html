@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Ahmed Foundation</title>
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="foot.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <img class="logo-icon" src="image/logo.jpeg" alt="Foundation Logo">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#impact">Impact</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="donate-btn">Donate Now</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+<main>
+    <!-- Donation Hero Section -->
+    <section class="donation-hero">
+        <div class="donation-hero-content">
+            <h1>Make a Difference Today</h1>
+            <p class="impact-statement">Your donation can help feed children and change lives</p>
+            <div class="impact-boxes">
+                <div class="impact-box">
+                    <h3>₹100</h3>
+                    <p>Provides breakfast for 5 children</p>
+                </div>
+                <div class="impact-box">
+                    <h3>₹500</h3>
+                    <p>Feeds 20 children for a day</p>
+                </div>
+                <div class="impact-box">
+                    <h3>₹2000</h3>
+                    <p>Supports a child's meals for a month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="donation-form-section">
+        <div class="donation-container">
+            <h2>Select Your Donation Amount</h2>
+            
+            <!-- Donation Amount Selection -->
+            <div class="amount-selector">
+                <button class="amount-btn" data-amount="100">₹100</button>
+                <button class="amount-btn" data-amount="500">₹500</button>
+                <button class="amount-btn" data-amount="1000">₹1000</button>
+                <button class="amount-btn" data-amount="2000">₹2000</button>
+                <div class="custom-amount">
+                    <input type="number" id="custom-amount" placeholder="Enter custom amount">
+                </div>
+            </div>
+
+            <!-- Donation Frequency -->
+            <div class="donation-frequency">
+                <h3>Donation Frequency</h3>
+                <div class="frequency-options">
+                    <label>
+                        <input type="radio" name="frequency" value="one-time" checked>
+                        One-time
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="monthly">
+                        Monthly
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="annually">
+                        Annually
+                    </label>
+                </div>
+            </div>
+
+            <!-- Donor Information Form -->
+            <form id="donation-form" class="donor-form">
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder="Full Name">
+                    <input type="email" id="email" required placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" required placeholder="Phone Number">
+                    <input type="text" id="pan" placeholder="PAN Number (Optional for tax benefits)">
+                </div>
+                <div class="form-group">
+                    <textarea id="address" required placeholder="Address"></textarea>
+                </div>
+
+                <!-- Payment Options -->
+                <div class="payment-options">
+                    <h3>Select Payment Method</h3>
+                    <div class="payment-methods">
+                        <button type="button" class="payment-method-btn" data-method="upi">UPI</button>
+                        <button type="button" class="payment-method-btn" data-method="card">Credit/Debit Card</button>
+                        <button type="button" class="payment-method-btn" data-method="netbanking">Net Banking</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="donate-submit-btn">Proceed to Payment</button>
+            </form>
+
+            <!-- Tax Benefits Notice -->
+            <div class="tax-benefits">
+                <p>Donations are eligible for tax benefits under Section 80G</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security and Trust Indicators -->
+    <section class="trust-indicators">
+        <div class="trust-container">
+            <div class="trust-item">
+                <img src="/api/placeholder/50/50" alt="Secure Payment">
+                <p>256-bit SSL Encryption</p>
+            </div>
+            <div class="trust-item">
+                <img src="/api/placeholder/50/50" alt="Tax Benefit">
+                <p>80G Tax Benefits</p>
+            </div>
+            <div class="trust-item">
+                <img src="/api/placeholder/50/50" alt="Trust">
+                <p>Trusted by 1M+ Donors</p>
+            </div>
+        </div>
+    </section>
+</main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@foundation.org</p>
+                <p>Phone: +919663423259</p>
+                <p>Address: Bangalore</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#about">About Us</a>
+                <a href="#programs">Our Programs</a>
+                <a href="#impact">Impact</a>
+                <a href="#donate">Donate</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-sliding functionality
+        function rotateSlides() {
+            const slides = document.querySelectorAll('.slide');
+            const active = document.querySelector('.slide.active');
+            active.classList.remove('active');
+            
+            if (active.nextElementSibling && active.nextElementSibling.classList.contains('slide')) {
+                active.nextElementSibling.classList.add('active');
+            } else {
+                slides[0].classList.add('active');
+            }
+        }
+
+        // Start the rotation
+        setInterval(rotateSlides, 5000);
+    </script>
+    <script>
+        // Amount Selection
+        const amountBtns = document.querySelectorAll('.amount-btn');
+        amountBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                amountBtns.forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                document.getElementById('custom-amount').value = '';
+            });
+        });
+
+        // Form Submission
+        document.getElementById('donation-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get selected amount
+            const selectedBtn = document.querySelector('.amount-btn.selected');
+            const amount = selectedBtn ? 
+                          selectedBtn.dataset.amount : 
+                          document.getElementById('custom-amount').value;
+
+            // Get selected payment method
+            const paymentMethod = document.querySelector('.payment-method-btn.selected').dataset.method;
+
+            // Here you would integrate with your payment gateway
+            // Example using Razorpay
+            const options = {
+                key: "YOUR_RAZORPAY_KEY", // Replace with your key
+                amount: amount * 100, // Amount in paise
+                currency: "INR",
+                name: "Ahmed Foundation",
+                description: "Donation",
+                image: "your-logo-url",
+                handler: function(response) {
+                    // Handle successful payment
+                    alert("Thank you for your donation!");
+                },
+                prefill: {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    contact: document.getElementById('phone').value
+                },
+                theme: {
+                    color: "#3399cc"
+                }
+            };
+            
+            // Initialize payment
+            const rzp = new Razorpay(options);
+            rzp.open();
+        });
+    </script>
+</body>
+</html>
